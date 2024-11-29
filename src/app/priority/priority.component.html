@@ -1,0 +1,66 @@
+<mat-tab-group dynamicHeight>
+  <mat-tab label="Without priority">
+    <div class="tab-content">
+      <img
+        [ngSrc]="'/assets/angular.webp'"
+        width="400"
+        height="400"
+        alt=""
+      />
+      <pre class="code">
+  &lt;img
+    src="/assets/angular.webp"
+    width="400"
+    height="400"
+  />
+      </pre>
+    </div>
+  </mat-tab>
+  <mat-tab label="With priority">
+    <ng-template matTabContent>
+      <div class="tab-content">
+        <img
+          [ngSrc]="'/assets/angular.webp'"
+          width="400"
+          height="400"
+          priority
+          alt=""
+        />
+        <pre class="code">
+  &lt;img
+    src="/assets/angular.webp"
+    width="400"
+    height="400"
+    priority
+  />
+        </pre>
+      </div>
+    </ng-template>
+  </mat-tab>
+  <mat-tab label="LCP Warning Ng Img without priority">
+    <ng-template matTabContent>
+      <div class="tab-content">
+        <img
+          [ngSrc]="'/assets/angular.webp'"
+          width="400"
+          height="400"
+          alt=""
+        />
+        <pre class="code">
+  &lt;img
+    [ngSrc]="'angular.jpg'"
+    width="400"
+    height="400"
+  />
+        </pre>
+        <p class="error">
+          NG02955: The NgOptimizedImage directive (activated on an <img /> element
+          with the 'ngSrc="http://localhost:60128/assets/angular.webp") has detected
+          that this image is the Largest Contentful Paint (LCP) element but was not
+          marked "priority". This image should be marked "priority" in order to
+          prioritize its loading. To fix this, add the "priority" attribute.
+        </p>
+      </div>
+    </ng-template>
+  </mat-tab>
+</mat-tab-group>

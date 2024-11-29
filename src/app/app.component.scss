@@ -1,0 +1,23 @@
+mat-toolbar {
+  position: sticky;
+  top:0;
+  z-index: 2;
+  display: flex;
+}
+
+mat-sidenav-container.mat-sidenav-container mat-sidenav.mat-sidenav {
+  min-width: 200px;
+
+  .mat-mdc-nav-list .mat-mdc-list-item.active {
+    background-color: rgb(0 0 0 / 12%);
+  }
+}
+
+mat-sidenav-content.mat-sidenav-content {
+  min-height: calc(100vh - 64px);
+
+  .sidenav-content-container {
+    padding: 32px;
+    flex-grow: 1;
+  }
+}

@@ -1,0 +1,11 @@
+<div style="display: flex; gap: 20px; flex-wrap: wrap">
+  @for (image of list; track $index) {
+    <img
+      width="300"
+      height="300"
+      [src]="image"
+      alt="A 300x300 placeholder image with a light gray background and bold black 'Preview' text in the center"
+    />
+  }
+</div>
+

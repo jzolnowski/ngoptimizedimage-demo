@@ -1,0 +1,38 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button aria-label="Menu icon" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <h1>NgOptimizedImage demo</h1>
+</mat-toolbar>
+<mat-sidenav-container autosize>
+  <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
+    <mat-nav-list>
+      <h3 matSubheader>Responsive</h3>
+      <mat-list-item routerLink="/responsive" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon matListItemIcon>group</mat-icon>
+        <span matListItemTitle>Responsive</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/priority" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon matListItemIcon>checklist</mat-icon>
+        <span matListItemTitle>Priority</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/placeholder" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon matListItemIcon>filter</mat-icon>
+        <span matListItemTitle>Placeholder</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/fill" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon matListItemIcon>zoom_out_map</mat-icon>
+        <span matListItemTitle>Fill</span>
+      </mat-list-item>
+      <mat-list-item routerLink="/demo" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon matListItemIcon>apps</mat-icon>
+        <span matListItemTitle>Demo</span>
+      </mat-list-item>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="sidenav-content-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

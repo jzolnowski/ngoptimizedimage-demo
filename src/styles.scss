@@ -1,0 +1,33 @@
+html, body { height: 100%; }
+
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.d-flex {
+  display: flex;
+}
+
+.code {
+  background-color: black;
+  color: white;
+  padding: 10px 10px 0 0;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.error {
+  font-family: "Courier New", Courier, monospace;
+  flex-basis: 70%;
+  color: red;
+}
+
+.tab-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  padding: 20px;
+}
+
